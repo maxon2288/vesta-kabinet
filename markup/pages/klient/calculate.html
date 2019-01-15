@@ -1,0 +1,208 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+<head>
+    {{> head/head head.defaults}}
+</head>
+
+<body class="page" style="visibility: hidden; opacity: 0;">
+    %=symbols=%
+
+    <div class="container">
+        {{> nav/nav-klient}}
+
+        <div class="content">
+            <div class="m-title">
+                Калькулятор
+            </div>
+
+            <div class="block">
+                <div class="block-item">
+                    <div class="light"> 
+                        <div class="calculate">
+
+                            <div class="calculate__left">
+                                <div class="calculate__cur">
+
+                                    <div class="calculate__cur-item">
+                                        <div class="calculate__cur-text">Стоимость жилья:   </div>
+                                        <div class="calculate__cur-info">
+                                            <input type="text" placeholder="6 000 000" class="m-field">
+                                            <div class="calculate__cur-field">тнг</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="calculate__cur-item">
+                                        <div class="calculate__cur-text">Первоначальный 
+                                                паевый взнос:</div>
+                                        <div class="calculate__cur-info">
+                                            <input type="text" placeholder="30" class="m-field">
+                                            <div class="calculate__cur-field">%</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="calculate__cur-item">
+                                        <div class="calculate__cur-text">Целевой взнос: </div>
+                                        <div class="calculate__cur-info">
+                                            <input type="text" placeholder="35" class="m-field">
+                                            <div class="calculate__cur-field">%</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="calculate__cur-item">
+                                        <div class="calculate__cur-text">Срок рассрочки: </div>
+                                        <div class="calculate__cur-info">
+                                            <input type="text" placeholder="48" class="m-field">
+                                            <div class="calculate__cur-field">мес</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="calculate__button">
+                                    <a href="#" class="m-button">Рассчитать</a>
+                                </div>
+
+                                <div class="calculate__res">
+                                    
+                                    <div class="calculate__res-item">
+                                        <div class="calculate__res-text">Первоначальный взнос :  </div>
+                                        <div class="calculate__res-value calc-res" data-val="1">6 000 000 тг</div>
+                                    </div>
+                                    
+                                    <div class="calculate__res-item">
+                                        <div class="calculate__res-text">Всего переплата :  </div>
+                                        <div class="calculate__res-value calc-res" data-val="2">6 000 000 тг</div>
+                                    </div>
+                                    
+                                    <div class="calculate__res-item">
+                                        <div class="calculate__res-text">Вступительный взнос : </div>
+                                        <div class="calculate__res-value calc-res" data-val="3">6 000 000 тг</div>
+                                    </div>
+                                    
+                                    <div class="calculate__res-item">
+                                        <div class="calculate__res-text">Переплата за 180 мес. от выделенной
+                                                суммы ПК "ВЕСТА ГЛОБАЛ":   </div>
+                                        <div class="calculate__res-value calc-res" data-val="3">6%</div>
+                                    </div>
+                                    
+                                    <div class="calculate__res-item">
+                                        <div class="calculate__res-text">Ежемесячный платеж : </div>
+                                        <div class="calculate__res-value calc-res" data-val="3">6 000 000 тг</div>
+                                    </div>
+
+                                </div>
+
+
+                                
+                            </div>
+
+                            <div class="calculate__right">
+                                <div class="m-table">
+                                    <table>
+                                        <tr>
+                                            <th>Месяц</th>
+                                            <th>Остаток паенакопления</th>
+                                            <th>Целевой взнос</th>
+                                            <th>Паевый взнос</th>
+                                            <th>Сумма оплат за мес.</th>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>4 200 000</td>
+                                            <td>4 200 000</td>
+                                            <td>4 200 000</td>
+                                            <td>4 200 000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>4 200 000</td>
+                                            <td>4 200 000</td>
+                                            <td>4 200 000</td>
+                                            <td>4 200 000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>4 200 000</td>
+                                            <td>4 200 000</td>
+                                            <td>4 200 000</td>
+                                            <td>4 200 000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>4 200 000</td>
+                                            <td>4 200 000</td>
+                                            <td>4 200 000</td>
+                                            <td>4 200 000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>4 200 000</td>
+                                            <td>4 200 000</td>
+                                            <td>4 200 000</td>
+                                            <td>4 200 000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>4 200 000</td>
+                                            <td>4 200 000</td>
+                                            <td>4 200 000</td>
+                                            <td>4 200 000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>4 200 000</td>
+                                            <td>4 200 000</td>
+                                            <td>4 200 000</td>
+                                            <td>4 200 000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>4 200 000</td>
+                                            <td>4 200 000</td>
+                                            <td>4 200 000</td>
+                                            <td>4 200 000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>4 200 000</td>
+                                            <td>4 200 000</td>
+                                            <td>4 200 000</td>
+                                            <td>4 200 000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>4 200 000</td>
+                                            <td>4 200 000</td>
+                                            <td>4 200 000</td>
+                                            <td>4 200 000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>4 200 000</td>
+                                            <td>4 200 000</td>
+                                            <td>4 200 000</td>
+                                            <td>4 200 000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>4 200 000</td>
+                                            <td>4 200 000</td>
+                                            <td>4 200 000</td>
+                                            <td>4 200 000</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+ {{> scripts/scripts}} 
+</body>
+
+</html>

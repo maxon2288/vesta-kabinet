@@ -1,0 +1,71 @@
+.vote {
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 4px;
+    margin-top: 20px;
+    width: 100%;
+    @media screen and (max-width: 768px) {
+        padding: 20px;
+    }
+    &__line {
+        height: 20px;
+        width: 100%;
+        margin-right: 10px;
+    }
+    &__items {
+        margin-top: 10px;
+    }
+    &__item {
+        @media screen and (max-width: 600px) {
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+            &:last-child {
+                margin-bottom: 0;   
+            }   
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+        margin-bottom: 10px; 
+        &:nth-child(3n + 1) {
+            .vote__line {
+                background-color: #204b99;
+            }
+        }
+        &:nth-child(3n + 2) {
+            .vote__line {
+                background-color: #a2c4e9;
+            }
+        }
+        &:nth-child(3n  + 3) {
+            .vote__line {
+                background-color: #d7e1ec;
+            }
+        }
+    }
+    .radio{
+        height: auto;
+        flex-wrap: wrap;
+        background-color: transparent;
+        &__item{
+            height: 30px;
+        }
+        &__psevdo{
+            background-color: #edf2f6; 
+        }
+    }
+    &__text {
+        min-width: 140px;
+        max-width: 140px;
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        font-weight: bold;
+        margin-bottom: 5px;
+        span {
+            color: #949eaa;
+            display: block;
+            font-family: "got";
+        }
+    }
+}

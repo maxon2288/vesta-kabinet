@@ -1,0 +1,113 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+<head>
+    {{> head/head head.defaults}}
+</head>
+
+<body class="page" style="visibility: hidden; opacity: 0;">
+    %=symbols=%
+
+    <div class="container">
+        {{> nav/nav-klient}}
+
+        <div class="content">
+            <div class="m-title">
+                Мои счета 
+            </div>
+
+            <div class="block">
+                <div class="block-item">
+                    <div class="page-back">
+                        <a href="#" class="page-back__button">
+                            {{Icon iconName="back"}}
+                            Назад
+                        </a>
+                        </div>
+                    </div>  
+
+                    <div class="light">
+                        <div class="bill-doc">
+                            
+                            <div class="doc no-">
+                                <div class="m-title-2 doc__title">
+                                    Документы
+                                </div>
+                                <div class="doc__button">
+                                    <div class="m-desc">Правила кооператива</div>
+                                    <span> (Не подписан)</span>
+                                </div>
+                            </div>
+
+                            <div class="doc">
+                                <div class="m-title-2 doc__title">
+                                    Документы
+                                </div>
+                                <div class="doc__button">
+                                    <a href="#" class="m-link">Правила кооператива</a>
+                                    <a href="doc.docx" download="" class="doc__download">
+                                        
+                                        {{Icon iconName="download"}}
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="dark">
+                        {{> ecp/ecp}}
+                    </div>
+
+                    <div class="light">
+                        <div class="m-title-2">
+                            Ваши данные
+                        </div>
+
+                        <form action="#" class="bill-form mt15">
+                            <input type="text" name="search" placeholder="ФИО"      class="m-field mr10">
+                            <input type="text" name="phone" placeholder="ИИН"      class="m-field mr10">
+                            <input type="text" name="phone" placeholder="телефон"  class="m-field">
+                        </form>
+
+                        <div class="m-table mt30">
+                            <table>
+                                <tr>
+                                    <th>Месяц</th>
+                                    <th>К оплате</th>
+                                    <th>По факту</th>
+                                    <th>Оплачено</th>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>160 000 тг</td>
+                                    <td>18.08.2018  /  15:00</td>
+                                    <td>Да</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>160 000 тг</td>
+                                    <td>18.08.2018  /  15:00</td>
+                                    <td>Да</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>160 000 тг</td>
+                                    <td>18.08.2018  /  15:00</td>
+                                    <td>Да</td>
+                                </tr>
+                            </table>
+                        </div>
+                        
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+ {{> scripts/scripts}} 
+</body>
+
+</html>

@@ -1,0 +1,219 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+<head>
+    {{> head/head head.defaults}}
+</head>
+
+<body class="page" style="visibility: hidden; opacity: 0;">
+    %=symbols=%
+
+    <div class="container">
+        {{> nav/nav-admin}}
+
+        <div class="content">
+            <div class="m-title">
+                Очередь
+            </div>
+
+            <div class="block">
+                <div class="block-item">
+                    <div class="light">
+                        <div class="turn">
+                            <form action="#" class="turn__left form-turn">
+                                <div class="turn__search">
+                                    <div class="m-title-2">Поиск</div>
+
+                                    <div class="turn__fields">
+                                        <input type="text" id="tab1" class="m-field" name="position" placeholder="Укажите позицию">
+                                        <input type="text" id="tab2" class="m-field" name="number" placeholder="Укажите № договора">
+                                        <input type="text" id="tab3" class="m-field" name="city" placeholder="Укажите Ф.И.О">
+                                        <input type="text" id="tab4" class="m-field" name="name" placeholder="Укажите город">
+                                    </div>
+                                </div>
+
+                                <div class="turn__type">
+                                    <div class="m-title-2">Тип очереди</div>
+                                    <div class="radio"> 
+                                        <label class="radio__item">
+                                            <input type="radio" name="Тип очереди" checked>
+                                            <div class="radio__psevdo">
+                                                    Все                                     
+                                            </div>
+                                        </label>
+
+                                        <label class="radio__item">
+                                            <input type="radio" name="Тип очереди">
+                                            <div class="radio__psevdo">
+                                                    Движимая                                 
+                                            </div>
+                                        </label>
+
+                                        <label class="radio__item">
+                                            <input type="radio" name="Тип очереди">
+                                            <div class="radio__psevdo">
+                                                    Недвижимая 
+                                            </div>
+                                        </label>
+                                    </div>  
+                                </div>
+                                <div class="turn__programm">
+                                    <div class="m-title-2">Программа</div>
+                                    <div class="radio"> 
+                                        <label class="radio__item">
+                                            <input type="radio" name="Программа" checked>
+                                            <div class="radio__psevdo">
+                                                Все                                                        
+                                            </div>
+                                        </label>
+
+                                        <label class="radio__item">
+                                            <input type="radio" name="Программа">
+                                            <div class="radio__psevdo">
+                                                Extra Light                                    
+                                            </div>
+                                        </label>
+
+                                        <label class="radio__item">
+                                            <input type="radio" name="Программа">
+                                            <div class="radio__psevdo">
+                                                Light 
+                                            </div>
+                                        </label>
+
+                                        <label class="radio__item">
+                                            <input type="radio" name="Программа">
+                                            <div class="radio__psevdo">
+                                                Silver                         
+                                            </div>
+                                        </label>
+
+                                        <label class="radio__item">
+                                            <input type="radio" name="Программа">
+                                            <div class="radio__psevdo">
+                                                Gold                           
+                                            </div>
+                                        </label>
+
+                                        <label class="radio__item">
+                                            <input type="radio" name="Программа">
+                                            <div class="radio__psevdo">
+                                                Platinum 
+                                            </div>
+                                        </label>
+
+                                    </div>  
+                                </div>
+
+                                <div class="turn__buttons">
+                                    <button class="m-button">
+                                            применить
+                                    </button>
+                                    <div class="m-link">
+                                        очистить
+                                    </div>
+                                </div>
+                                
+                            </form>
+                            <div class="turn__right">
+                                <div class="m-table">
+                                    <table>
+                                        <tr>
+                                            <th>Позиция</th>
+                                            <th>№ дог.</th>
+                                            <th>Очередь</th>
+                                            <th>Программа</th>
+                                            <th>Ф.И.О.</th>
+                                        </tr>
+                                        <tr>
+                                            <td>lorem <a href="#">{{Icon iconName="edit"}}</a></td>
+                                            <td>lorem</td>
+                                            <td>lorem</td>
+                                            <td>lorem</td>
+                                            <td>lorem</td>
+                                        </tr>
+                                        <tr>
+                                            <td>lorem <a href="#">{{Icon iconName="edit"}}</a></td>
+                                            <td>lorem</td>
+                                            <td>lorem</td>
+                                            <td>lorem</td>
+                                            <td>lorem</td>
+                                        </tr>
+                                        <tr>
+                                            <td>lorem <a href="#">{{Icon iconName="edit"}}</a></td>
+                                            <td>lorem</td>
+                                            <td>lorem</td>
+                                            <td>lorem</td>
+                                            <td>lorem</td>
+                                        </tr>
+                                        <tr>
+                                            <td>lorem <a href="#">{{Icon iconName="edit"}}</a></td>
+                                            <td>lorem</td>
+                                            <td>lorem</td>
+                                            <td>lorem</td>
+                                            <td>lorem</td>
+                                        </tr>
+                                        <tr>
+                                            <td>lorem <a href="#">{{Icon iconName="edit"}}</a></td>
+                                            <td>lorem</td>
+                                            <td>lorem</td>
+                                            <td>lorem</td>
+                                            <td>lorem</td>
+                                        </tr>
+                                        <tr>
+                                            <td>lorem <a href="#">{{Icon iconName="edit"}}</a></td>
+                                            <td>lorem</td>
+                                            <td>lorem</td>
+                                            <td>lorem</td>
+                                            <td>lorem</td>
+                                        </tr>
+                                        <tr>
+                                            <td>lorem <a href="#">{{Icon iconName="edit"}}</a></td>
+                                            <td>lorem</td>
+                                            <td>lorem</td>
+                                            <td>lorem</td>
+                                            <td>lorem</td>
+                                        </tr>
+                                        <tr>
+                                            <td>lorem <a href="#">{{Icon iconName="edit"}}</a></td>
+                                            <td>lorem</td>
+                                            <td>lorem</td>
+                                            <td>lorem</td>
+                                            <td>lorem</td>
+                                        </tr>
+                                        <tr>
+                                            <td>lorem <a href="#">{{Icon iconName="edit"}}</a></td>
+                                            <td>lorem</td>
+                                            <td>lorem</td>
+                                            <td>lorem</td>
+                                            <td>lorem</td>
+                                        </tr>
+                                        <tr>
+                                            <td>lorem <a href="#">{{Icon iconName="edit"}}</a></td>
+                                            <td>lorem</td>
+                                            <td>lorem</td>
+                                            <td>lorem</td>
+                                            <td>lorem</td>
+                                        </tr>
+                                        <tr>
+                                            <td>lorem <a href="#">{{Icon iconName="edit"}}</a></td>
+                                            <td>lorem</td>
+                                            <td>lorem</td>
+                                            <td>lorem</td>
+                                            <td>lorem</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                {{> pag/pag}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+ {{> scripts/scripts}} 
+</body>
+
+</html>

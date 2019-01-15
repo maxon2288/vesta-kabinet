@@ -1,0 +1,252 @@
+// GUI stylies of the project
+// For example, styles of the links, buttons and so on.
+
+.m-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #1f2942;
+    font-family: 'ral';
+    margin-bottom: 35px;
+}
+.m-title-2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1f2942; 
+    font-family: 'ral';
+}
+
+.m-title-3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #1f2942; 
+    font-family: 'ral';
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.m-desc {
+    font-size: 16px;
+    font-weight: 500;
+    color: #434343;
+}
+
+.m-button-1 {
+    padding: 15px 0;
+    max-width: 200px;
+    width: 100%;
+    display: flex;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #204b99;
+    border-radius: 4px;
+    transition: 0.1s;
+    &:hover{
+        background-color: #1a3e80;
+    }
+    &:active{
+        transform: translateY(1px);
+    }
+}
+.m-button-2 {
+    padding: 15px 0;
+    max-width: 200px;
+    width: 100%;
+    display: flex;
+    text-transform: uppercase;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 2px solid #204b99;
+    color: #204b99;
+    border-radius: 4px;
+    transition: 0.1s;
+    border-radius: 100px;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: "ral";
+    font-weight: 800;
+    &:hover{
+        background-color: #204b99;
+        color: white;
+    }
+    &:active{
+        transform: translateY(1px);
+    }
+}
+
+.m-link{
+    color: #204b99;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: underline;
+    &:hover{
+        text-decoration: none;
+    }
+}
+.m-link-w{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: underline;
+    &:hover{
+        text-decoration: none;
+    }
+}
+.m-button {
+    @extend .m-button-1;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    background-color: #204b99;
+    border: none;
+    max-width: 100%;
+    width: 100%;
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+    &-angle {
+        @extend .m-button-1;
+        @extend .m-button;
+        min-width: 135px;       
+        display: flex;
+        width: 100%;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}
+
+.m-field {
+    border-radius: 100px;
+    border: none;
+    background-color: white;
+    padding: 13px 27px;
+    color: #a2a1a1;
+    font-family: 'got';
+    font-weight: bold;
+    text-transform: uppercase;  
+    font-size: 14px;
+    min-width: 250px;
+    max-width: 440px;
+    border: 2px solid white;
+    transition: 0.3s;
+    border: 2px solid white;
+    width: 440px;
+    @media screen and (max-width: 600px) {
+        padding: 6px 20px;
+        height: 40px !important;
+    }
+    &.error {
+        border: 2px solid red;
+    }
+    &.valid {
+        border: 2px solid green;
+    }
+    &-angle {
+        @extend .m-field;
+
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+    &::placeholder {
+        transition: 0.3s;
+        text-transform: uppercase;
+    }
+    &:focus {
+        color: #434343;
+    }
+    &::placeholder {
+        font-family: 'ral';
+        font-size: 12px;
+    }
+    &:disabled{
+        opacity: 0.6;
+        user-select: none;
+    }
+    &:focus::placeholder {
+        transform: translateY(-15px);
+        opacity: 0;
+    }
+    &.m-textarea {
+        padding: 0;
+        padding-left: 27px;
+        padding-top: 13px;
+        border-radius: 26px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        vertical-align: top;
+        height: 110px !important;
+    }
+}
+
+.mr0 {
+    margin-right: 0 !important; 
+}
+
+.mt10 {
+    margin-top: 10px !important; 
+}
+
+.mt20 {
+    margin-top: 20px !important; 
+}
+
+.mt30 {
+    margin-top: 30px !important; 
+}
+
+.mt15 {
+    margin-top: 15px !important; 
+}
+
+.mt25{
+    margin-top: 25px !important; 
+}
+
+.mb10{
+    margin-bottom: 10px !important; 
+}
+
+.mb20 {
+    margin-bottom: 20px !important; 
+}
+
+.mb30 {
+    margin-bottom: 30px !important; 
+}
+
+.ml10{
+    margin-left: 10px !important;
+}
+
+.ml20{
+    margin-left: 20px !important;
+}
+
+.ml30{
+    margin-left: 30px !important;
+}
+
+.mr10{
+    margin-right: 10px !important;
+}
+
+.mr20{
+    margin-right: 20px !important;
+}
+
+.mr30{
+    margin-right: 30px !important;
+}
