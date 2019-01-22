@@ -13,7 +13,7 @@
 
         <div class="content">
             <div class="m-title">
-                    Программы (34)
+                    Программы <span>(2)</span>
             </div>
 
             <div class="block">
@@ -27,18 +27,6 @@
                                             <th colspan="2">
                                                 <div class="cell-cont">
                                                     Silver 
-                                                    <div class="cell-block">
-                                                        <a href="#" class="m-link-w"> 
-                                                            {{Icon iconName="del"}}
-                                                            Удалить
-                                                        </a>
-                                                        <a href="#" class="m-link-w"> 
-                                                            {{Icon iconName="edit"}}
-                                                            Редактировать
-                                                        </a>
-                                                        
-                                                    </div>
-    
                                                 </div>
                                             </th>
                                         </tr>
@@ -65,6 +53,7 @@
                                     </table>
                                 </div>
                             </div>
+
                             <div class="block__half">
                                 <div class="m-table">
                                     <table>
@@ -72,18 +61,6 @@
                                             <th colspan="2">
                                                 <div class="cell-cont">
                                                     Silver 
-                                                    <div class="cell-block">
-                                                        <a href="#" class="m-link-w"> 
-                                                            {{Icon iconName="del"}}
-                                                            Удалить
-                                                        </a>
-                                                        <a href="#" class="m-link-w"> 
-                                                            {{Icon iconName="edit"}}
-                                                            Редактировать
-                                                        </a>
-                                                        
-                                                    </div>
-    
                                                 </div>
                                             </th>
                                         </tr>
@@ -110,18 +87,55 @@
                                     </table>
                                 </div>
                             </div>
+                            
+                            <div class="block__half w100">
+                                <div class="m-table">
+                                    <table>
+                                        <tr>
+                                            <th colspan="6">
+                                                <div class="cell-cont">
+                                                    Silver 
+                                                </div>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td>Первоначальный взнос</td>
+                                            <td colspan="5">30%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Целевой взнос</td>
+                                            <td colspan="5">30%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Срок</td>
+                                            <td>50 мес.</td>
+                                            <td>50 мес.</td>
+                                            <td>50 мес.</td>
+                                            <td>50 мес.</td>
+                                            <td>50 мес.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Вступительный взнос  </td>
+                                            <td colspan="5">30%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Тип счёта</td>
+                                            <td colspan="5">Аннуитетный</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            
                         </div>
-    
-                        <a href="#" class="bottom-button callPopup" data-popupBlock="add-programm">
-                            Добавить программу {{Icon iconName="add"}}
-                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     
+    {{> popup/popup}}
  {{> scripts/scripts}} 
+ 
 </body>
 
 </html>

@@ -35,9 +35,9 @@
                                 
                             </form>
                             <div class="vote-add">
-                                <div class="m-button">
+                                <a href="add-vote.html" class="m-button">
                                     Добавить голосование
-                                </div>
+                                </a>
                             </div>
                         </div>
 
@@ -58,7 +58,7 @@
                                             
                                     <td>
                                         <div class="td-tools">
-                                            <a href="#" class="del">{{Icon iconName="del"}} Удалить</a>
+                                            <a href="#" class="del callPopup" data-popupBlock="popup-delete-vote">{{Icon iconName="del"}} Удалить</a>
                                         </div>
                                     </td>
                                 </tr>
@@ -191,6 +191,7 @@
         </div>
     </div>
     
+    {{> popup/popup}}
 {{> scripts/scripts}} 
 </body>
 

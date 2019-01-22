@@ -33,14 +33,14 @@
                             <form action="#" class="user-form user__form">
                                 <div class="user__left">
                                     <div class="user__info">
-                                        <input type="text" name="text" class="m-field mb10" placeholder="ФИО">
+                                        <input type="text" name="name" class="m-field field-no-border mb10" placeholder="ФИО">
                                         <div class="user__info-row">
-                                            <input type="text" name="addres" class="m-field mb10" placeholder="адрес">
-                                            <input type="text" name="mail" class="m-field mb10" placeholder="E-mail">
-                                            <input type="text" name="iin" class="m-field mb10" placeholder="ИИН">
-                                            <input type="text" name="phone" class="m-field mb10" placeholder="Телефон">
+                                            <input type="text" name="addres" class="m-field field-no-border mb10" placeholder="адрес">
+                                            <input type="text" name="email" class="m-field  field-no-border mb10" placeholder="E-mail">
+                                            <input type="text" name="iin" class="m-field  field-no-border mb10" placeholder="ИИН">
+                                            <input type="text" name="phone" class="m-field  field-no-border mb10" placeholder="Телефон">
                                         </div>  
-                                        <textarea type="text" name="phone" class="m-field m-textarea mb10" placeholder="Заметка"></textarea>
+                                        <textarea type="text" name="messages" class="m-field field-no-border m-textarea mb10" placeholder="Заметка"></textarea>
 
                                     </div>
 
@@ -70,9 +70,9 @@
                                         <div class="m-title-2 mb10">Изменить пароль</div>
 
                                         <div class="password__field">
-                                            <input class="m-field mb10" placeholder="старый пароль" type="text" name="password">
-                                            <input class="m-field mb10" placeholder="новый пароль" type="text" name="passwordNew" id="password-new">
-                                            <input class="m-field" placeholder="повторите пароль" type="text" name="passwordYetConfirm">
+                                            <input class="m-field field-no-border mb10" placeholder="старый пароль" type="password" name="password">
+                                            <input class="m-field field-no-border mb10" placeholder="новый пароль" type="password" name="passwordNew" id="password-new">
+                                            <input class="m-field field-no-border" placeholder="повторите пароль" type="password" name="passwordYetConfirm">
                                         </div>
 
                                     </div>
@@ -89,35 +89,57 @@
                                         </div>
 
                                         <div class="agent__features">
-
-                                            <div class="radio"> 
-                                                <label class="radio__item">
-                                                    <input type="radio" name="radio-group-2" checked>
-                                                    <div class="radio__psevdo">
-                                                            Агент                   
-                                                    </div>
-                                                </label>
+                                            
+                                            <div class="user-tabs">
+                                                <ul class="radio"> 
+                                                    <li class="radio__item">
+                                                        <a href="#users-1">
+                                                            <div class="radio__psevdo">
+                                                                    Агент                   
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li class="radio__item">
+                                                        <a href="#users-2">
+                                                            <div class="radio__psevdo">
+                                                                    Агент                   
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li class="radio__item">
+                                                        <a href="#users-3">
+                                                            <div class="radio__psevdo">
+                                                                    Агент                   
+                                                            </div>
+                                                        </a>
+                                                    </li>
+        
+                                                </ul>          
+                                                
+                                                <div class="nice-select__container" id="users-1">
+                                                    <select name="nice-select" class="nice-select" id="nice-select">
+                                                        <option value="1">Щербакова А А</option>
+                                                        <option value="2" selected>Щерfdsasfsбакова А А</option>
+                                                        <option value="3">Щербакова А А</option>
+                                                    </select>
+                                                </div>
+                                                <div class="nice-select__container" id="users-2">
+                                                    <select name="nice-select" class="nice-select" id="nice-select">
+                                                        <option value="1">Щербакова А А</option>
+                                                        <option value="2" selected>Щербакова А А</option>
+                                                        <option value="3">Щербакова А А</option>
+                                                    </select>
+                                                </div>
+                                                <div class="nice-select__container" id="users-3">
+                                                    <select name="nice-select" class="nice-select" id="nice-select">
+                                                        <option value="1">Щербаfdsaкова А А</option>
+                                                        <option value="2" selected>Щербfsакова А А</option>
+                                                        <option value="3">Щербакова А А</option>
+                                                    </select>
+                                                </div>
     
-                                                <label class="radio__item">
-                                                    <input type="radio" name="radio-group-2">
-                                                    <div class="radio__psevdo">
-                                                            Директор                 
-                                                    </div>
-                                                </label>
-    
-                                                <label class="radio__item">
-                                                    <input type="radio" name="radio-group-2">
-                                                    <div class="radio__psevdo">
-                                                            Региональный 
-                                                    </div>
-                                                </label>
-                                            </div>                                            
 
-                                            <select name="" class="nice-select" id="">
-                                                <option value="1">Щербакова А А</option>
-                                                <option value="2" selected>Щербакова А А</option>
-                                                <option value="3">Щербакова А А</option>
-                                            </select>
+                                            </div>
 
                                             <a href="#" class="m-link agent__link">Назначить</a>
                                         </div>
@@ -137,7 +159,9 @@
         </div>
     </div>
     
+    {{> popup/popup}}
  {{> scripts/scripts}} 
+ 
 </body>
 
 </html>

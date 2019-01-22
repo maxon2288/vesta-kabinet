@@ -29,50 +29,61 @@
 						</div>
 						<div class="stats__item stats__item-25">
 							<div class="stats__text">
-								Количество региональных
+									Количество директоров
 							</div>
 							<div class="stats__info">
-								12
+									30
 							</div>
 						</div>
 						<div class="stats__item stats__item-25">
 							<div class="stats__text">
-								Количество региональных
+									Количество агентов
 							</div>
 							<div class="stats__info">
-								12
+									26
 							</div>
 						</div>
 						<div class="stats__item stats__item-25">
 							<div class="stats__text">
-								Количество региональных
+									Количество клиентов
 							</div>
 							<div class="stats__info">
-								12
+									463
 							</div>
 						</div>
 						<div class="stats__item">
 							<div class="stats__text">
-								Количество региональных
+									Людей в кооперативе
 							</div>
 							<div class="stats__info">
-								12
+									456
 							</div>
 						</div>
 						<div class="stats__item">
 							<div class="stats__text">
-								Количество региональных
+									Людей в кооперативе
 							</div>
 							<div class="stats__info">
-								12
+								14562
 							</div>
 						</div>
 						<div class="stats__item">
 							<div class="stats__text">
-								Количество региональных
+									В паевом фонде
 							</div>
 							<div class="stats__info">
-								12
+								<div class="stats-content">
+									<span class="stats-info">39 351 077</span> тг
+									<a href="#" class="stats-edit">
+										{{Icon iconName="edit"}}
+									</a>
+								</div>
+								<form action="#" class="stats-content-click">
+									<input type="text" name="numberTg" class="stats-field">
+									<button class="stats-ok">
+										{{Icon iconName="ok"}}
+									</button>
+								</form>
 							</div>
 						</div>
 
@@ -98,7 +109,7 @@
 											<th>№ дог.</th>
 											<th>
 												<div class="cell-cont">
-													Ф.И.О. <a href="#" class="m-link-w">Выдать квартиру</a>
+													Ф.И.О. <a href="#" class="m-link-w callPopup" data-popupBlock="popup-accept">Выдать квартиру</a>
 												</div>
 											</th>
 										</tr>
@@ -150,7 +161,7 @@
 											<td>Клубничкин Александр Петрович</td>
 											<td>
 												<div class="td-tools">
-													<a href="#" class="acc">{{Icon iconName="add"}}</a>
+													<a href="#" class="acc callPopup" data-popupBlock="popup-add-user">{{Icon iconName="add"}}</a>
 													<a href="#" class="del callPopup"  data-popupBlock="popup-delete-user" >{{Icon iconName="del"}}</a>
 													<a href="edit-user.html" class="edit">{{Icon iconName="edit"}}</a>
 												</div>
@@ -161,7 +172,7 @@
 											<td>Клубничкин Александр Петрович</td>
 											<td>
 												<div class="td-tools">
-													<a href="#" class="acc">{{Icon iconName="add"}}</a>
+													<a href="#" class="acc callPopup" data-popupBlock="popup-add-user">{{Icon iconName="add"}}</a>
 													<a href="#" class="del callPopup"  data-popupBlock="popup-delete-user">{{Icon iconName="del"}}</a>
 													<a href="edit-user.html" class="edit">{{Icon iconName="edit"}}</a>
 												</div>
@@ -172,7 +183,7 @@
 											<td>Клубничкин Александр Петрович</td>
 											<td>
 												<div class="td-tools">
-													<a href="#" class="acc">{{Icon iconName="add"}}</a>
+													<a href="#" class="acc callPopup" data-popupBlock="popup-add-user">{{Icon iconName="add"}}</a>
 													<a href="#" class="del callPopup"  data-popupBlock="popup-delete-user">{{Icon iconName="del"}}</a>
 													<a href="edit-user.html" class="edit">{{Icon iconName="edit"}}</a>
 												</div>
@@ -183,7 +194,7 @@
 											<td>Клубничкин Александр Петрович</td>	
 											<td>
 												<div class="td-tools">
-													<a href="#" class="acc">{{Icon iconName="add"}}</a>
+													<a href="#" class="acc callPopup" data-popupBlock="popup-add-user">{{Icon iconName="add"}}</a>
 													<a href="#" class="del callPopup" data-popupBlock="popup-delete-user">{{Icon iconName="del"}}</a>
 													<a href="edit-user.html" class="edit">{{Icon iconName="edit"}}</a>
 												</div>
@@ -213,11 +224,12 @@
 									<div class="m-title-2">
 											Документы
 									</div>
-									<a href="#" class="m-link mla">Смотреть все голосования</a>
 								</div>
 		
 								
 								{{> doc/doc-admin}}
+
+								<div class="bottom-button callPopup" data-popupBlock="popup-add-doc">Добавить документ</div>
 							</div>
 							
 						</div>
@@ -229,7 +241,9 @@
 		</div>
 	</div>
 
+	{{> popup/popup}}
  {{> scripts/scripts}}
+ 
 </body>
 
 </html>

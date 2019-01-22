@@ -59,54 +59,65 @@
                         {{> ecp/ecp}}
                     </div>
 
-                    <div class="light">
-                        <div class="m-title-2">
-                            Ваши данные
+                    <form action="#" class="bill-data-form">
+                        <div class="light">
+                            <div class="m-title-2 mb10">
+                                Ваши данные
+                            </div>
+    
+                            <div class="bill-form mt15">
+                                <input type="text" name="search" placeholder="ФИО"      class="m-field mr10 mb10" readonly>
+                                <input type="text" name="phone" placeholder="ИИН"      class="m-field mr10 mb10" readonly>
+                                <input type="text" name="phone" placeholder="телефон"  class="m-field" readonly>
+                            </div>
+    
+                            <div class="m-table mt30">
+                                <table>
+                                    <tr>
+                                        <th>Месяц</th>
+                                        <th>К оплате</th>
+                                        <th>По факту</th>
+                                        <th>Оплачено</th>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>160 000 тг</td>
+                                        <td>18.08.2018  /  15:00</td>
+                                        <td>Да</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>160 000 тг</td>
+                                        <td>18.08.2018  /  15:00</td>
+                                        <td>Да</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>160 000 тг</td>
+                                        <td>18.08.2018  /  15:00</td>
+                                        <td>Да</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            
                         </div>
+    
+    
+                        <div class="form-vote__bottom">
+                            <div class="form-vote__desc m-desc">
+                                После нажатия на кнопку "Подписаться" вы не сможете изменить или отменить свои действия
+                            </div>
 
-                        <form action="#" class="bill-form mt15">
-                            <input type="text" name="search" placeholder="ФИО"      class="m-field mr10">
-                            <input type="text" name="phone" placeholder="ИИН"      class="m-field mr10">
-                            <input type="text" name="phone" placeholder="телефон"  class="m-field">
-                        </form>
-
-                        <div class="m-table mt30">
-                            <table>
-                                <tr>
-                                    <th>Месяц</th>
-                                    <th>К оплате</th>
-                                    <th>По факту</th>
-                                    <th>Оплачено</th>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>160 000 тг</td>
-                                    <td>18.08.2018  /  15:00</td>
-                                    <td>Да</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>160 000 тг</td>
-                                    <td>18.08.2018  /  15:00</td>
-                                    <td>Да</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>160 000 тг</td>
-                                    <td>18.08.2018  /  15:00</td>
-                                    <td>Да</td>
-                                </tr>
-                            </table>
+                            <button class="form-vote__submit">Подписаться</button>
                         </div>
-                        
-                    </div>
-
+                    </form>
 
                 </div>
             </div>
         </div>
     </div>
     
+    {{> popup/popup}}
  {{> scripts/scripts}} 
 </body>
 

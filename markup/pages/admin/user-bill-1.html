@@ -1,0 +1,121 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+<head>
+    {{> head/head head.defaults}}
+</head>
+
+<body class="page" style="visibility: hidden; opacity: 0;">
+    %=symbols=%
+
+    <div class="container">
+        {{> nav/nav-admin}}
+
+        <div class="content">
+            <div class="m-title">
+                Мои счета 
+            </div>
+
+            <div class="block">
+                <div class="block-item">
+                    <div class="page-back">
+                        <a href="#" class="page-back__button">
+                            {{Icon iconName="back"}}
+                            Назад
+                        </a>
+                        </div>
+                    </div>  
+
+                    <div class="light">
+                        <div class="bill-doc">
+                            
+                            <div class="doc no-">
+                                <div class="m-title-2 doc__title">
+                                    Документы
+                                </div>
+                                <div class="doc__button">
+                                    <div class="m-desc">Правила кооператива</div>
+                                    <span> (Не подписан)</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <form action="#" >
+                        <div class="light">
+                            <div class="m-title-2 mb10">
+                                Ваши данные
+                            </div>
+    
+                            <form action="#" class="bill-form mt15">
+                                <input type="text" name="search" placeholder="ФИО"     class="m-field mr10 mb10" readonly>
+                                <input type="text" name="phone" placeholder="ИИН"      class="m-field mr10 mb10" readonly>
+                                <input type="text" name="phone" placeholder="телефон"  class="m-field" readonly>
+                            </form>
+    
+                            <div class="m-table mt30 bill-table">
+                                <table>
+                                    <tr>
+                                        <th>Месяц</th>
+                                        <th>К оплате</th>
+                                        <th>По факту</th>
+                                        <th>Оплачено</th>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>160 000 тг</td>
+                                        <td>18.08.2018  /  15:00</td>
+                                        <td>
+                                            <select name="#" id="#" class="nice-select">
+                                                <option value="1">Да</option>
+                                                <option value="2">нет</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>160 000 тг</td>
+                                        <td>18.08.2018  /  15:00</td>
+                                        <td>
+                                            <select name="#" id="#" class="nice-select">
+                                                <option value="1">Да</option>
+                                                <option value="2">нет</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>160 000 тг</td>
+                                        <td>18.08.2018  /  15:00</td>
+                                        <td>
+                                            <select name="#" id="#" class="nice-select">
+                                                <option value="1">Да</option>
+                                                <option value="2">нет</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            
+                        </div>
+    
+    
+                        <div class="form-vote__bottom">
+                            <div class="form-vote__desc m-desc">
+                            </div>
+
+                            <button class="form-vote__submit">принять</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    {{> popup/popup}}
+ {{> scripts/scripts}} 
+</body>
+
+</html>

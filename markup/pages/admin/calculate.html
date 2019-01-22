@@ -22,47 +22,50 @@
                         <div class="calculate">
 
                             <div class="calculate__left">
-                                <div class="calculate__cur">
-
-                                    <div class="calculate__cur-item">
-                                        <div class="calculate__cur-text">Стоимость жилья:   </div>
-                                        <div class="calculate__cur-info">
-                                            <input type="text" placeholder="6 000 000" class="m-field">
-                                            <div class="calculate__cur-field">тнг</div>
+                                
+                                <form action="#" class="calc-form">
+                                    <div class="calculate__cur">
+    
+                                        <div class="calculate__cur-item">
+                                            <div class="calculate__cur-text">Стоимость жилья:   </div>
+                                            <div class="calculate__cur-info">
+                                                <input type="text" name="price" value="6 000 000"  class="m-field">
+                                                <div class="calculate__cur-field">тнг</div>
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    <div class="calculate__cur-item">
-                                        <div class="calculate__cur-text">Первоначальный 
-                                                паевый взнос:</div>
-                                        <div class="calculate__cur-info">
-                                            <input type="text" placeholder="30" class="m-field">
-                                            <div class="calculate__cur-field">%</div>
+                                        <div class="calculate__cur-item">
+                                            <div class="calculate__cur-text">Первоначальный 
+                                                    паевый взнос:</div>
+                                            <div class="calculate__cur-info">
+                                                <input type="text" name="first" value="30" class="m-field">
+                                                <div class="calculate__cur-field">%</div>
+                                            </div>
                                         </div>
-                                    </div>
-
-                                    <div class="calculate__cur-item">
-                                        <div class="calculate__cur-text">Целевой взнос: </div>
-                                        <div class="calculate__cur-info">
-                                            <input type="text" placeholder="35" class="m-field">
-                                            <div class="calculate__cur-field">%</div>
+    
+                                        <div class="calculate__cur-item">
+                                            <div class="calculate__cur-text">Целевой взнос: </div>
+                                            <div class="calculate__cur-info">
+                                                <input type="text" name="target" value="35" class="m-field">
+                                                <div class="calculate__cur-field">%</div>
+                                            </div>
                                         </div>
-                                    </div>
-
-                                    <div class="calculate__cur-item">
-                                        <div class="calculate__cur-text">Срок рассрочки: </div>
-                                        <div class="calculate__cur-info">
-                                            <input type="text" placeholder="48" class="m-field">
-                                            <div class="calculate__cur-field">мес</div>
+    
+                                        <div class="calculate__cur-item">
+                                            <div class="calculate__cur-text">Срок рассрочки: </div>
+                                            <div class="calculate__cur-info">
+                                                <input type="text" name="term" placeholder="48" value="48" class="m-field">
+                                                <div class="calculate__cur-field">мес</div>
+                                            </div>
                                         </div>
+    
                                     </div>
-
-                                </div>
-
-                                <div class="calculate__button">
-                                    <a href="#" class="m-button">Рассчитать</a>
-                                </div>
-
+    
+                                    <div class="calculate__button">
+                                        <button class="m-button">Рассчитать</button>
+                                    </div>
+                                </form>
+                                
                                 <div class="calculate__res">
                                     
                                     <div class="calculate__res-item">
@@ -82,7 +85,7 @@
                                     
                                     <div class="calculate__res-item">
                                         <div class="calculate__res-text">Переплата за 180 мес. от выделенной
-                                                суммы ПК "ВЕСТА ГЛОБАЛ":   </div>
+                                        суммы ПК "ВЕСТА ГЛОБАЛ":   </div>
                                         <div class="calculate__res-value calc-res" data-val="3">6%</div>
                                     </div>
                                     
@@ -92,8 +95,6 @@
                                     </div>
 
                                 </div>
-
-
                                 
                             </div>
 
@@ -202,7 +203,9 @@
         </div>
     </div>
     
+    {{> popup/popup}}
  {{> scripts/scripts}} 
+ 
 </body>
 
 </html>

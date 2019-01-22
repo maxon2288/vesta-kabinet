@@ -1,0 +1,82 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+<head>
+    {{> head/head head.defaults}}
+
+    <!-- include jQuery library -->
+
+</head>
+
+<body class="page" style="visibility: hidden; opacity: 0;">
+    %=symbols=%
+
+    <div class="container">
+        {{> nav/nav-admin}}
+
+        <div class="content">
+            <div class="m-title">
+                Добавить Голосование
+            </div>
+
+            <div class="block">
+                <div class="block-item">
+                    <div class="page-back">
+                        <a href="#" class="page-back__button">
+                            {{Icon iconName="back"}}
+                            Назад
+                        </a>
+                    </div>
+                    <div class="light">
+                        <form action="#" class="form-add-vote">
+                            
+                            <div class="form-add-vote__top">
+                                    <input type="text" name="add-form" class="m-field" placeholder="название">
+                                    
+                                    <div class="datepicker">
+                                        <input type="text" readonly class="m-field form-datepicker" autocomplete="off" placeholder="Дата начала">
+                                        {{Icon iconName="calendar"}}
+                                    </div>
+                                    <div class="datepicker">
+                                        <input type="text" readonly class="m-field form-datepicker" autocomplete="off" placeholder="Дата окончания">
+                                        {{Icon iconName="calendar"}}
+                                    </div>
+
+                            </div>
+
+                            <textarea name="editor1" name="textarea" id="editor2" rows="10" cols="80">
+
+                            </textarea>
+
+                            <div class="upload">
+                                <input type="file" name="file-1[]" id="file-1" class="inputfile inputfile-1" data-multiple-caption="{count} files selected" multiple="">
+                                <label for="file-1" class="bottom-button bottom__button"><span>Загрузить файл</span></label>
+                            </div>
+
+                            <div class="punct">
+                                <div class="m-title-2 mb10 mt20">Пункты голосования</div>
+
+                                <div class="vote-punct">
+                                    <div class="vote-punct__item">
+                                        <input type="text" class="m-field" name="addVote" placeholder="Название пункта">
+                                        <div class="delete-punct">-</div>
+                                    </div>
+                                </div>
+                                <div class="add-punct bottom-button bottom__button">Добавить пункт</div>
+                            </div>
+
+                            <button class="m-button mt20">Добавить голосование</button>
+
+                        </form>     
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{> popup/popup}}
+    {{> scripts/scripts}} 
+
+</body>
+
+</html>

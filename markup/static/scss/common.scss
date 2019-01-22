@@ -12,7 +12,7 @@ body {
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box !important;
     outline: none;
 }
 
@@ -20,6 +20,7 @@ body {
     display: flex;
     align-items: stretch;
     justify-content: space-between;
+    
 }   
 .nav {
     max-width: 310px;
@@ -55,6 +56,7 @@ body {
 
 ::-webkit-scrollbar {
     width: 3px;
+    height: 3px;
     background-color: #f6f9fc;
 }
 
@@ -79,7 +81,13 @@ body {
 
 .content {
     margin: 0 auto;
-    width: 100%;
+    width: calc(100% - 310px);
+    @media screen and (max-width: 1440px) {
+        width: calc(100% - 250px);        
+    }
+    @media screen and (max-width: 1100px) {
+        width: 100%;
+    }
     padding: 38px 40px;
     @media screen and (max-width: 1100px) {
         padding: 15px;   
@@ -89,6 +97,7 @@ body {
     overflow: hidden;
     padding-bottom: 50px;
     position: relative;
+    z-index: 1;
     .table-prev, .table-next{
         border-radius: 50%;
         background-color: rgb(227, 30, 37);
@@ -115,6 +124,7 @@ body {
 .block {
     border-radius: 4px;
     overflow: hidden;
+    width: 100%;
     .light{
         background-color: #edf2f6;
         padding: 30px 40px;
@@ -159,6 +169,10 @@ body {
         margin-right: 30px;
         margin-bottom: 20px;
         overflow: hidden;
+        &.w100{
+            width: 100%;
+            max-width: 100%;
+        }
         &.w40 {
             min-width: 0;
             max-width: calc(40% - 30px);
@@ -234,6 +248,25 @@ body {
     }
 }
 
+.loan{
+    background-color: #17366f;
+    color: #b2c7ed;
+    max-width: 200px;
+    width: 100%; 
+    height: 54px;
+    right: -30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    @media screen and (max-width: 768px) {
+    height: 50px;   
+    }
+    &:hover{
+        background-color: #162b53;
+    }
+}
+
 .stats {
     display: flex;
     flex-wrap: wrap;
@@ -271,6 +304,11 @@ body {
         font-size: 24px;
         font-weight: bold;
         color: #204b99;
+        font-family: 'got';
+        svg{
+            fill: #949eaa;
+            margin-left: 10px;
+        }
     }
     &__text {
         margin-right: 15px;
@@ -300,6 +338,7 @@ body {
         }
     }
     tr {
+        position: relative;
         &:nth-child(odd) {
             background-color: #f4f7fa;
         }
@@ -312,6 +351,7 @@ body {
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
+        position: relative;
         .cell-block {
             display: flex;
             flex-wrap: wrap;
@@ -335,7 +375,6 @@ body {
         background-color: #204b99;
         text-align: left;
         border-left: 2px solid #1c4285;
-        white-space: nowrap;
         &:first-child {
             border-left: none;
         }
@@ -357,7 +396,7 @@ body {
 }
 
 .mb0 {
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
 }
 
 .bottom-button {
@@ -439,7 +478,188 @@ body {
         }
     }
 }
+.votes-table{
+    white-space: nowrap;
+}
 
+.form-add-vote{
+    &__top{
+        display: flex;
+    }
+    input {
+        margin-bottom: 10px;
+        margin-right: 10px;
+        max-width: 100%;
+    }
+    .datepicker {
+        min-width: 350px !important;
+        max-width: 350px;
+        width: 350px;
+    }
+    .cke_top {
+        display: block !important;
+    }
+    .cke_bottom {
+        display: none !important;
+    }
+}
+
+.ui-datepicker table{
+    margin: 0;
+    tr {
+        border: 2px solid #edf0f2;
+        font-size: 16px;
+        &:nth-child(2n) {
+            background-color: #edf0f2;
+        }
+    }
+    th {
+        color: #434343;
+    }
+    td {
+        &:hover{
+            background-color: rgb(218, 218, 218);
+        }
+        a {
+            text-align: center;
+            color: #696969;
+            font-weight: bold;
+        }
+    }
+}
+.ui-datepicker {
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 0;
+    font-family: "got";
+    box-shadow: 0 2px 12px 0 rgba(144, 159, 175, 0.39);
+}
+.ui-datepicker { 
+    margin-left: 80px;
+}
+.ui-datepicker-header {
+    background-color: #dbe3eb;
+    font-family: "got";
+    font-weight: bold;
+    color: #1f2942;
+    position: relative;
+    padding: 15px !important;
+    font-size: 16px;
+    &:before{
+        content: '';
+        width: 0;
+        height: 0;
+        right: 20px;
+        transform: rotate(45deg) translate(8px, 60%);
+        position: absolute;
+        bottom: 100%;
+        border: 10px solid #dbe3eb;
+        z-index: -1;
+        box-shadow: 0 2px 12px 0 rgba(144, 159, 175, 0.39);
+    }
+}
+
+.ui-datepicker-next, .ui-datepicker-prev {
+    height: 100% !important;
+    position: relative;
+    cursor: pointer;
+    &:hover{
+        &:before{
+            border-color: #9ca2aa;
+        }
+    }
+    &:before{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-225deg);
+        width: 13px;
+        height: 13px;
+        border: 4px solid #b6bdc7;
+        background-color: transparent;
+        border-left: none;
+        border-top: none;
+    }
+}
+.ui-datepicker-next{
+    &:before{
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+}
+
+.datepicker {
+    position: relative;
+    align-items: flex-start;
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    input { 
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
+    svg{
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        fill: #d9e2e9;
+        z-index: 100;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+
+    }
+}
+
+.upload {
+    display: flex;  
+    width: 100%;
+    justify-content: flex-start;
+    input{
+        display: none;
+    }
+    label {
+        display: flex;
+        width: 100%;
+        margin: 20px 0;
+    }
+}
+
+.delete-punct {
+    color: white;
+    font-size: 18px;
+    background-color: #204b99;
+    padding: 20px;
+    border-radius: 100px;
+}
+.punct {
+    .bottom-button {
+        margin-top: 20px;
+    }
+}
+.vote-punct {
+    &__item {
+        display: flex;
+        .delete-punct {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            justify-content: center;
+            color: white;
+            white-space: nowrap;
+            font-weight: bold;
+            width: 45px;
+            height: 45px;
+            border-radius: 100px;
+            background-color: #204b99;
+        }
+    }
+}
+.request {
+    white-space: nowrap;
+}
 .form-vote {
     &__bottom {
         display: flex;
@@ -451,12 +671,26 @@ body {
         padding-left: 30px;
         align-items: center;
         @media screen and (max-width: 425px) {
+            flex-direction: column; 
+            min-height: 57px;
+            height: auto;
+            padding: 0;
+        }
+        button, a {
+            height: 57px;
+            @media screen and (max-width: 425px) {
+                margin-top: 10px;
+                max-width: 100%;
+            }
         }
     }
     &__desc {
         color: #434343;
         font-weight: 500;  
         font-size: 14px;
+        @media screen and (max-width: 425px) {
+            padding: 10px;
+        }
     }
     &__submit {
         display: flex;
@@ -670,6 +904,7 @@ body {
             align-items: center;
             justify-content: center;
             background-color: #fff;
+            
         }
         &-delete {
             color: #204b99;
@@ -679,6 +914,9 @@ body {
             svg {
                 fill: #949eaa;
                 margin-right: 5px;
+            }
+            &:hover {
+                background-color: #eee;
             }
         }
         &-save {
@@ -690,7 +928,7 @@ body {
             letter-spacing: 1px;
             text-decoration: none;
             &:hover {
-
+                background-color: #1b3d74;
             }
         }
     }
@@ -731,6 +969,9 @@ body {
     ul {
         width: 100%;
     }
+    .option{
+        font-weight: 500 !important;
+    }
     &:after {
         width: 8px !important;
         top: 40% !important;
@@ -761,6 +1002,14 @@ body {
             }
         }
     }
+    .m-field{
+        &.error{
+            border-color: #ecf0f4 !important;
+        }
+        &.valid{
+            border-color: #ecf0f4 !important;
+        }
+    }
     .m-table {
         margin-top: 0;
         td {
@@ -780,6 +1029,8 @@ body {
         color: white;
         svg {
             fill: #849cc9;
+            width: 25px; 
+            height: 25px;
         }
         span {
             color: #90a3d2;
@@ -797,6 +1048,7 @@ body {
             }
         }
     }
+
     &__modal {
         background-color: #fff;
         position: absolute;     
@@ -804,6 +1056,19 @@ body {
         transform: scaleY(0);
         transition: 0.3s;
         transform-origin: 0 0;
+        &:after{
+            content: '';
+            position: absolute; 
+            top: 0;
+            width: 100%;
+            height: 250px;
+            left: 0;
+            z-index: 0;
+            top: 100%;
+            z-index: -2;
+            background-color: #101e36;
+            opacity: 0.25;
+        }
         &.visible {
             transform: scaleY(1);
         }
@@ -857,6 +1122,7 @@ body {
         width: calc(25% - 22.5px);  
         position: relative;
         max-height: 720px;
+        overflow: hidden;
         @media screen and (max-width: 1400px) {
             width: calc(50% - 15px);
             margin-bottom: 30px;
@@ -875,9 +1141,45 @@ body {
                 margin: 0 5px;
             }
         }
+        td {
+            .users-name{
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+            cursor: pointer;
+            &:hover{
+                background-color: #eceff5;
+            }
+        }
     }
     .m-table {
         overflow-y: auto;
+    }
+}
+
+.loan-form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    .m-field{
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+    .nice-select{
+        width: 100%;
+        max-width: 100% !important;
+        min-width: 0;
+    }
+    .radio{
+        min-height: 30px;
+        border: 2px solid #eceff5;
+        height: auto
+    }
+    .radio__item{
+        min-height: 30px;
     }
 }
 
@@ -1089,11 +1391,37 @@ body {
     &__item {
         margin-bottom: 30px;
         width: calc(50% - 15px);
+        border-radius: 4px;
         @media screen and (max-width: 768px) {
             width: 100%;
         }
         th,td{
             white-space: nowrap;
+        }
+        .m-table{
+            &.sale{
+                user-select: none;
+                overflow: hidden;
+                position: relative;
+                &:before{
+                    content: 'Квартира выдана';
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    position: absolute;
+                    height: 100%;
+                    border-radius: 4px;
+                    color: white;
+                    font-weight: bold;
+                    font-size: 36px;
+                    font-family: 'ral';
+                    background-color: rgba(16, 30, 54, 0.8);
+                    @media screen and (max-width: 768px) {
+                        font-size: 20px;    
+                    }   
+                }
+            }
         }
     }
     &__link {
@@ -1102,6 +1430,7 @@ body {
         justify-content: center;
         width: 100%;
     }
+    
 }
 
 .vote-klient {
@@ -1114,28 +1443,22 @@ body {
     @media screen and (max-width: 1100px) {
         flex-direction: column;
     }
+    .m-table{
+        white-space: nowrap;
+    }
     &__left {
         display: flex;
         flex-direction: column;
-        max-width: 465px;
         width: 100%;
         margin-right: 40px;
         border-radius: 4px;
         overflow: hidden;
+        max-width: 465px;
         @media screen and (max-width: 1100px) {
             max-width: 100%;
             margin-bottom: 30px;
         }
-    }
-    &__right {
-        max-width: 100%;
-        width: 100%;
-        .m-table{
-            margin-top: 0;
-            th {
-                white-space: nowrap;
-            }
-        }
+        
     }
     &__cur {
         padding: 35px 30px;
@@ -1309,13 +1632,52 @@ body {
 .bill-form {
     margin-bottom: 20px;
     .m-field{
-        margin-bottom: 10px;
         @media screen and (max-width: 600px) {
             width: 100%;
         }
     }
 }
+.bill-table{
+    overflow-y: visible !important;
+    .nice-select{ 
+        height: 25px !important;
+        .list{
+            display: none;
+        }
+        &.open{
+            .list {
+                display: block;
+            }
+        }
+    }
+    table{
+        overflow-y: visible !important; 
+    }
+}
 
+.users-search{
+    display: flex;
+    max-width: 440px;
+    margin-top: 10px;
+    button {
+        width: 60px;
+        min-width: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        vertical-align: middle;
+        svg{
+            fill: #fff;
+            width: 20px;
+            height: 20px;
+            transform: translatex(-3px);
+        }
+    }
+    .m-field{
+        min-width: 0;
+    }
+}
 
 .user {
     display: flex;
@@ -1483,6 +1845,17 @@ body {
     }
 }
 
+.radio {
+    a {
+        text-decoration: none;
+    }
+}
+.nice-select__container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
 .access {
     display: flex;
     justify-content: flex-start;
@@ -1522,6 +1895,9 @@ body {
         }
     }
 }
+
+
+
 
 .turn{
     display: flex;
@@ -1650,5 +2026,123 @@ body {
     }
     &__type{
         margin-bottom: 25px;
+    }
+}
+
+
+.turn-close, .turn-ok{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    svg{
+        width: 15px;
+    }
+    &:hover{
+        svg{
+            fill: #808488
+        }
+    }
+}
+
+.turn-edit{
+    svg{
+        width: 15px;
+        height: 15px;
+    } 
+}
+
+.turn-content{
+    display: flex;
+}
+.turn-content-click{
+    display: none;
+    justify-content: flex-start;
+}
+.turn-edit-field{
+    border: 0px;
+    background-color: #fff;
+    max-width: 100%;
+    width: 50px;
+    border: 1px solid #434343;
+    padding-left: 2px;
+    min-width: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #434343;
+    font-family: 'got';
+    border-radius: 3px;
+    &.error{
+        border-color: red;
+    }
+}
+.stats-content{
+    display: flex;
+}
+.stats-content-click{
+    display: none;
+    input {
+        width: 160px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #204b99;
+        font-family: 'got';
+        border: 2px solid #c7d2dd;
+        padding: 2px;
+        &.error{
+            border: 2px solid red;
+        }
+    }
+    button {
+        border: none;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+        &:hover{
+            svg {
+                fill: #808488;
+            }
+        }
+    }
+}
+
+.all-users{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    .m-table{
+        max-height: 600px;
+        overflow-y: auto;
+    }
+    &__top{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__right{
+        width: 100%;
+        max-width: 340px;
+        .m-button {
+            width: 100%;
+        }
+    }
+    &__container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .block__half{
+            min-width: 0%;
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        &__container{
+            width: 100%;
+            margin-bottom: 30px;
+        }
     }
 }
