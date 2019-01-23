@@ -88,6 +88,42 @@ $(document).ready(function () {
          
          });
 	 });
+	 $(".data-href").each(function() {
+		var it = $(this);
+		it.click(function() {
+			var dataHref = it.data("href")
+			console.log(dataHref);
+			var popup = it.data("popupblock");
+			$("."+ popup).find(".m-button").attr("href", dataHref);
+		});	
+	 });
+	 $(".data-turn").each(function() {
+		var it = $(this);
+		it.click(function() {
+			var dataHref = it.data("href")
+			console.log(dataHref);
+			var popup = it.data("popupblock");
+			$("."+ popup).find(".form-edit__bottom-save").attr("href", dataHref);
+		});	
+	 });
+	 $(".delete-vote-button").each(function() {
+		var it = $(this);
+		it.click(function() {
+			var dataHref = it.data("href")
+			console.log(dataHref);
+			var popup = it.data("popupblock");
+			$("."+ popup).find(".m-button").attr("href", dataHref);
+		});	
+	 });
+	 $(".delete-vote").each(function() {
+		var it = $(this);
+		it.click(function() {
+			var dataHref = it.data("href")
+			console.log(dataHref);
+			var popup = it.data("popupblock");
+			$("."+ popup).find(".m-button").attr("href", dataHref);
+		});	
+	 });
 	 $('.form-datepicker').datepicker({});
 	$('.stats-content-click').each(function() {
         var it = $(this);
