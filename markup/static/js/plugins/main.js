@@ -94,7 +94,7 @@ $(document).ready(function () {
 			var dataHref = it.data("href")
 			console.log(dataHref);
 			var popup = it.data("popupblock");
-			$("."+ popup).find(".m-button").attr("href", dataHref);
+			$("."+ popup).find("form").attr("action", dataHref);
 		});	
 	 });
 	 $(".data-turn").each(function() {
@@ -103,7 +103,7 @@ $(document).ready(function () {
 			var dataHref = it.data("href")
 			console.log(dataHref);
 			var popup = it.data("popupblock");
-			$("."+ popup).find(".form-edit__bottom-save").attr("href", dataHref);
+			$("."+ popup).find("form").attr("action", dataHref);
 		});	
 	 });
 	 $(".delete-vote-button").each(function() {
@@ -112,7 +112,7 @@ $(document).ready(function () {
 			var dataHref = it.data("href")
 			console.log(dataHref);
 			var popup = it.data("popupblock");
-			$("."+ popup).find(".m-button").attr("href", dataHref);
+			$("."+ popup).find("form").attr("action", dataHref);
 		});	
 	 });
 	 $(".delete-vote").each(function() {
@@ -121,9 +121,16 @@ $(document).ready(function () {
 			var dataHref = it.data("href")
 			console.log(dataHref);
 			var popup = it.data("popupblock");
-			$("."+ popup).find(".m-button").attr("href", dataHref);
+			$("."+ popup).find("form").attr("action", dataHref);
 		});	
 	 });
+
+
+
+
+	 
+	 
+	 
 	 $('.form-datepicker').datepicker({});
 	$('.stats-content-click').each(function() {
         var it = $(this);
@@ -165,7 +172,7 @@ $(document).ready(function () {
 	 var myregexp = /(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/ ]{11})/i;
 
 	$(".add-punct").click(function() {
-		$(".vote-punct").append('<div class="vote-punct__item"><input type="text" class="m-field" name="addVote" placeholder="Название пункта" required><div class="delete-punct">-</div></div>');
+		$(".vote-punct").append('<div class="vote-punct__item"><input type="text" class="m-field" name="addVote[]" placeholder="Название пункта" required><div class="delete-punct">-</div></div>');
 		$(".delete-punct").click(function() {
 			$(this).closest(".vote-punct__item").css("display", "none")
 		})

@@ -45,13 +45,7 @@ function forms() {
              submitHandler: function() {
                  // console.log(1)
                  // $(".form input, .form textarea").val('');
-                 $.ajax({
-                     // type: 'POST',
-                     // url: 'mail.php',
-                     success: function(){
-                         it.find("input").val("");
-                     }
-                 });
+                 
              },  
          
          });
@@ -71,13 +65,7 @@ function forms() {
              submitHandler: function() {
                  // console.log(1)
                  // $(".form input, .form textarea").val('');
-                 $.ajax({
-                     // type: 'POST',
-                     // url: 'mail.php',
-                     success: function(){
-                         it.find("input").val("");
-                     }
-                 });
+                 
              },  
          
          });
@@ -92,15 +80,7 @@ function forms() {
              },
     
              submitHandler: function() {
-                 // console.log(1)
-                 // $(".form input, .form textarea").val('');
-                 $.ajax({
-                     // type: 'POST',
-                     // url: 'mail.php',
-                     success: function(){
-                         it.find("input").val("");
-                     }
-                 });
+                it.find("input").val("");
              },  
          
          });
@@ -121,13 +101,7 @@ function forms() {
              submitHandler: function() {
                  // console.log(1)
                  // $(".form input, .form textarea").val('');
-                 $.ajax({
-                     // type: 'POST',
-                     // url: 'mail.php',
-                     success: function(){
-                         it.find("input").val("");
-                     }
-                 });
+                 
              },  
          
          });
@@ -145,15 +119,6 @@ function forms() {
              },
     
              submitHandler: function() {
-                 // console.log(1)
-                 // $(".form input, .form textarea").val('');
-                 $.ajax({
-                     // type: 'POST',
-                     // url: 'mail.php',
-                     success: function(){
-                         it.find("input").val("");
-                     }
-                 });
              },  
          
          });
@@ -245,115 +210,16 @@ function forms() {
                  // console.log(1)
                  // $(".form input, .form textarea").val('');
                  $.ajax({
-                     // type: 'POST',
-                     // url: 'mail.php',
-                     success: function(){
-                         it.find("input").val("");
-                     }
-                 });
+                    // type: 'POST',
+                    // url: 'mail.php',
+                    success: function(){
+                        it.find("input").val("");
+                    }
+                });
              },  
          
          });
      });
-    $('.form-turn').each(function() {
-        var it = $(this);
-         it.validate({
-             rules: {
-                 
-                 position: {
-                     required: true,
-                     digits: true,
-                 },
-                 number: {
-                     required: true,
-                     digits: true,
-                 },
-                 city: {
-                     required: true,
-                 },
-                 name: {
-                     required: true,
-                 }
-             },
-         
-             errorPlacement: function (error, element) {
-             },
-    
-             submitHandler: function() {
-                 // console.log(1)
-                 // $(".form input, .form textarea").val('');
-                 $.ajax({
-                     // type: 'POST',
-                     // url: 'mail.php',
-                     success: function(){
-                         it.find("input").val("");
-                     }
-                 });
-             },  
-         
-         });
-     });
-    // $('.user-form').each(function() {
-    //     var it = $(this);
-    //      it.validate({
-    //          rules: {
-    //              email: {
-    //                  required: false,
-    //                  email: true,
-    //              }, 
-    //              phone: {
-    //                  required: false,
-    //                  minlength: 11
-    //              },
-    //              vote: {
-    //                 required: true,
-    //              },
-    //              name: {
-    //                  required: false,
-    //              },
-    //              addres: {
-    //                  required: false,
-    //              },
-    //              name: {
-    //                  required: false,
-    //              },
-    //              messages: {
-    //                  required: false,
-    //              },
-    //              name: {
-    //                  required: false,
-    //              },
-    //              password: {
-    //                  required: false,
-    //              },
-    //              iin: {
-    //                 minlength: 12,
-    //                 maxlength: 12,
-    //                 required: false, 
-    //              },
-    //              passwordYetConfirm: {
-    //                  required: false,  
-    //                  equalTo: "#password-new"          
-    //              }
-    //          },
-         
-    //          errorPlacement: function (error, element) {
-    //          },
-    
-    //          submitHandler: function() {
-    //              // console.log(1)
-    //              // $(".form input, .form textarea").val('');
-    //              $.ajax({
-    //                  // type: 'POST',
-    //                  // url: 'mail.php',
-    //                  success: function(){
-    //                      it.find("input").val("");
-    //                  }
-    //              });
-    //          },  
-         
-    //      });
-    //  });
     $('.ecp-form').each(function() {
         var it = $(this);
          it.validate({
@@ -403,13 +269,7 @@ function forms() {
              submitHandler: function() {
                  // console.log(1)
                  // $(".form input, .form textarea").val('');
-                 $.ajax({
-                     // type: 'POST',
-                     // url: 'mail.php',
-                     success: function(){
-                         it.find("input").val("");
-                     }
-                 });
+                 
              },  
          
          });
