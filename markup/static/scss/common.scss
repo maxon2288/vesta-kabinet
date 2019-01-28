@@ -670,6 +670,10 @@ body {
         justify-content: space-between;
         padding-left: 30px;
         align-items: center;
+        &.light {
+            padding: 0;
+            padding-left: 30px;
+        }
         @media screen and (max-width: 425px) {
             flex-direction: column; 
             min-height: 57px;
@@ -1844,6 +1848,77 @@ body {
         align-items: center;
     }
 }
+.glyphicon-calendar {
+    svg {
+        fill: white;    
+    }
+}
+
+.table {
+    &__bottom-info {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 30px;
+        border-radius: 4px;
+        background-color: #dee6ee;
+        margin-top: 20px;
+        &-item {
+            margin-right: 30px;
+            font-size: 18px;
+            font-weight: 500;
+            span {
+                color: #434343;
+                font-weight: bold;
+                font-family: "got";
+            }
+        }
+    }
+}
+.input-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    .m-field {
+        height: 45px;
+    }
+}
+.bootstrap-datetimepicker-widget {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    left: 0;
+    right: 100%;    
+    ul {
+        list-style: none;
+    }
+    table {
+        width: 100%;
+        background-color: #fff;
+        border-radius: 4px;
+        box-shadow: 0 0 16px 0.2px rgba(0, 0, 0, 0.233);
+        td, th{
+            cursor: pointer;
+            font-family: "got";
+            padding: 3px 5px;
+        }
+    }
+}
+.input-group-addon {
+    width: 45px;
+    max-height: 45px;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: #204b99;
+    svg  {
+        width: 20px;
+        height: 20px;
+        fill: white;
+    }
+}
 
 .radio {
     a {
@@ -2144,5 +2219,14 @@ body {
             width: 100%;
             margin-bottom: 30px;
         }
+    }
+}
+
+.add-payment__content {
+    max-width: 400px;
+    width: 100%;
+    .m-button {
+        min-width: 45px;
+        margin-left: 5px;
     }
 }

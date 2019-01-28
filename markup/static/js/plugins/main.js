@@ -88,6 +88,8 @@ $(document).ready(function () {
          
          });
 	 });
+	 //default intialize
+	 $('#datepicker ').datetimepicker();
 	 $(".data-href").each(function() {
 		var it = $(this);
 		it.click(function() {
@@ -124,11 +126,6 @@ $(document).ready(function () {
 			$("."+ popup).find("form").attr("action", dataHref);
 		});	
 	 });
-
-
-
-
-	 
 	 
 	 
 	 $('.form-datepicker').datepicker({});
