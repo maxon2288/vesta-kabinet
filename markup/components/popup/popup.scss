@@ -153,7 +153,23 @@
             line-height: 2;
             font-weight: bold;
         }
+        .bottom-button{
+            width: 100%; 
+            max-width: 350px;
+            span {
+                color: #85a1bd !important;
+            }
+        }
     }
+    .upload {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+.popup-width-field {
+    min-width: 0px;
+    max-width: 350px !important;
 }
 .overlay{
     position: fixed;

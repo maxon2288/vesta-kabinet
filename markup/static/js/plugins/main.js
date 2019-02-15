@@ -126,6 +126,17 @@ $(document).ready(function () {
 			$("."+ popup).find("form").attr("action", dataHref);
 		});	
 	 });
+	 $(".link-href").each(function() {
+		var it = $(this);
+		it.click(function() {
+			var dataHref = it.data("href")
+			console.log(dataHref);
+			var popup = it.data("popupblock");
+			$("."+ popup).find(".m-button").attr("href", dataHref);
+		});	
+	 });
+
+
 	 
 	 
 	 $('.form-datepicker').datepicker({});
@@ -178,6 +189,16 @@ $(document).ready(function () {
 	$(".delete-punct").click(function() {
 		$(this).closest(".vote-punct__item").remove();
 	});
+
+
+
+	//////// НОВЫЕ СКРИПТЫ
+
+
+	$(".open-upload-button, .upload-otmena").click(function() {
+		$(".open-upload").toggleClass("visible")
+	});
+	
 	
 
 })

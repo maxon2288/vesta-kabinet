@@ -39,6 +39,40 @@
         </div>
     </div>
 </div>
+<div class="popup add-bill">
+    <div class="popup__container">
+        <div class="popup-content">
+            <div class="popup__close popupClose">
+                {{Icon iconName="close"}}
+            </div>
+            <div class="popup__top popup__block">
+                <div class="popup__top-title">
+                    заголовок   
+                </div>           
+            </div>
+            <form action="#">
+                <div class="popup__desc  popup__block white">
+                    <div class="upload">
+                        <input type="file" name="file-1[]" id="file-1" class="inputfile inputfile-1" data-multiple-caption="{count} files selected" multiple="">
+                        <label for="file-1" class="bottom-button bottom__button"><span>Загрузить файл</span></label>
+                    </div>
+                    <input type="text" class="m-field popup-width-field"  placeholder="сумма">
+                    <select name="" id="" class="popup-width-field">
+                        <option value="">lorem</option>
+                        <option value="">lorem</option>
+                        <option value="">lorem</option>
+                        <option value="">lorem</option>
+                    </select>
+                </div>
+                <div class="popup__delete-button  popup__block">
+                    <button class="m-button">
+                        Добавить
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 <div class="popup popup-delete-vote">
     <div class="popup__container">
         <div class="popup-content">
@@ -111,35 +145,37 @@
             
     </div>
 </div>
+
 <div class="popup popup-accept">
     <div class="popup__container">
-        <div class="popup-content">
-            <div class="popup__close popupClose">
-                {{Icon iconName="close"}}
-            </div>
-            <div class="popup__top popup__block">
-                <div class="popup__top-title">
-                    Выдать квартиру
+        <form action="#">
+            <div class="popup-content">
+                <div class="popup__close popupClose">
+                    {{Icon iconName="close"}}
                 </div>
-                <div class="popup__top-desc">
-                    Это действие нельзя будет отменить
+                <div class="popup__top popup__block">
+                    <div class="popup__top-title">
+                        Выдать квартиру
+                    </div>
+                    <div class="popup__top-desc">
+                        Это действие нельзя будет отменить
+                    </div>
+                </div>
+                <div class="popup__desc  popup__block white mb0">
+                    <input type="text" class="m-field" placeholder="целевой взнос (%)" required maxlength="">
+                    <input type="text" class="m-field mt30" placeholder="срок рассрочки (мес)" required maxlength="">
+                </div>
+                <div class="form-edit__bottom">
+                    <a href="#" class="form-edit__bottom-button form-edit__bottom-delete">
+                        отменить
+                    </a>
+                    <button class="form-edit__bottom-button form-edit__bottom-save">
+                        выдать
+                    </a>
                 </div>
             </div>
-            <div class="popup__desc  popup__block white mb0">
-                <p>
-                    вы действителььно хотите выдать квартиру
-                </p>
-            </div>
-            <div class="form-edit__bottom">
-                <a href="#" class="form-edit__bottom-button form-edit__bottom-delete">
-                    отменить
-                </a>
-                <a href="#" class="form-edit__bottom-button form-edit__bottom-save">
-                    выдать
-                </a>
-            </div>
-        </div>
-            
+        </form>
+                
     </div>
 </div>
 <div class="popup popup-add-user">
@@ -156,7 +192,7 @@
             <div class="popup__desc  popup__block white">
                 
                 <p>Вы действительно хотите принять этого пользователя?</p>
-        
+                
             </div>
             <div class="popup__delete-button  popup__block">
                 <a href="#" class="m-button">
