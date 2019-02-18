@@ -5,7 +5,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        width: 100%;    
+        width: 100%;
         margin-top: 20px;
     }
     &__item {
@@ -19,6 +19,15 @@
         @media screen and (max-width: 675px) {
             width: 100%;
         }
+        @media screen and (max-width: 1400px) {
+            width: 100%;
+        }
+        @media screen and (max-width: 1000px) {
+         padding: 10px;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;   
+        }
     }
     &__features{
         svg {
@@ -27,9 +36,7 @@
         }
         
         a {
-            margin-left: 20px;
             display: block;
-            
         }
         display: flex;
         justify-content: space-between;
