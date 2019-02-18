@@ -10,8 +10,6 @@
     width: 100vw;
     height: 100vh;
     z-index: 100;
-    overflow-y: auto;
-    overflow-x: hidden;
     visibility: hidden;
     opacity: 0;
     transition: 0.3s;
@@ -48,6 +46,9 @@
     &__container {
         max-width: 715px;
         width: 100%;
+        overflow: auto;
+        margin: 100px 0;
+        max-height: 90vh;
         @media screen and (max-width: 767px) {
             max-width: 400px;
             width: 100%;
@@ -82,10 +83,9 @@
         }
     }
     &-content {
-        position: relative;
+        // position: relative;
         background-color: #edf2f6; 
         border-radius: 4px;
-        margin: 100px 0;
     }
     &.visible {
         visibility: visible;
@@ -148,6 +148,7 @@
         font-weight: 500;
         font-family: "ral";
         margin-bottom: 10px;
+        max-height: 100%;
         span {
             color: #000;
             line-height: 2;
