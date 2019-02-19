@@ -12,11 +12,12 @@ function popup() {
         $(this).closest('form').find('input').val('');
     });
 
-    // $(".popup, .popup__container").click(function(e) {
-    //     if (e.target == this) {
-    //         $('.popup, .overlay, .header-menu, .humburger-overlay, .period').removeClass('visible');
-    //     }
-    // });
+    $(".popup, .popup__container").click(function(e) {
+        if (e.target == this) {
+            $('.popup, .overlay, .header-menu, .humburger-overlay').removeClass('visible');
+            $('body').css('overflow-y', 'auto');
+        }
+    });
 
     // if ($(".popup").hasClass('visible')) {
     //     $(".popup__container").addClass('visible');
@@ -32,7 +33,7 @@ function popup() {
         //         $('.' + popup).css('top', $(window).scrollTop()+ "px");
         //     });
         // };
-        $('body').css('overflow-y', 'auto');
+        $('body').css('overflow-y', 'hidden');
         $('.overlay').addClass('visible');
         $('.' + popup).addClass('visible');
     });

@@ -46,7 +46,6 @@
     &__container {
         max-width: 715px;
         width: 100%;
-        overflow: auto;
         margin: 100px 0;
         max-height: 90vh;
         @media screen and (max-width: 767px) {
@@ -56,6 +55,9 @@
         }
         @media screen and (max-width: 425px) {
             max-width: 280px;
+        }
+        .file-popup {
+            overflow-y: auto;
         }
     }
     &__programm-name{
@@ -83,7 +85,7 @@
         }
     }
     &-content {
-        // position: relative;
+        position: relative;
         background-color: #edf2f6; 
         border-radius: 4px;
     }

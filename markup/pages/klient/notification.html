@@ -1,0 +1,61 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+<head>
+    {{> head/head head.defaults}}
+</head>
+
+<body class="page" style="visibility: hidden; opacity: 0;">
+    %=symbols=%
+
+    <div class="container">
+        {{> nav/nav-klient}}
+
+        <div class="content">
+            <div class="m-title">
+                Уведомления 
+            </div>
+
+            <div class="block">
+                <div class="block-item">
+                    <div class="light">
+                        <div class="m-table notificate">
+                            <table>
+                                <tr>    
+                                    <td class="min-td">1.</td>
+                                    <td>lorem</td>
+                                    <td class="min-td td-delete callPopup" data-popupBlock="delete">
+                                        <a href="#">
+                                            {{Icon iconName="del"}}
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="min-td">2.</td>
+                                    <td>lorem</td>
+                                    <td class="min-td">{{Icon iconName="del"}}</td>
+                                </tr>
+                                <tr>    
+                                    <td class="min-td">3.</td>
+                                    <td>lorem</td>
+                                    <td class="min-td">{{Icon iconName="del"}}</td>
+                                </tr>
+                                <tr>
+                                    <td class="min-td">4.</td>
+                                    <td>lorem</td>
+                                    <td class="min-td">{{Icon iconName="del"}}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    {{> popup/popup}}
+    {{> scripts/scripts}} 
+ 
+</body>
+
+</html>

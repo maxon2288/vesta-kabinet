@@ -2302,6 +2302,27 @@ th.nopadding {
     }
 }
 
+.notificate {
+    svg {
+        fill: #c7d2dd;
+        transition: 0.3s;
+    }
+    .min-td {
+        width: 80px;
+        min-width: 80px;
+
+    }
+    .td-delete {
+        cursor: pointer;
+        &:hover {
+            svg {
+                fill: #afb8c2;
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+
 .all-users{
     display: flex;
     justify-content: space-between;
