@@ -252,12 +252,16 @@ body {
 }
 th.nopadding {
     padding: 0 !important;
+    position: relative;
 }
 .loan{
     background-color: #17366f;
     color: #b2c7ed;
     width: 100%; 
-    height: 54px;
+    min-height: 100%;
+    height: 100%;
+    white-space: nowrap;
+    text-align: center;
     right: -30px;
     display: flex;
     align-items: center;
@@ -266,7 +270,15 @@ th.nopadding {
     height: 50px;   
     }
     &__container {
-        position: relative;
+        position: absolute;
+        height: 100%;  
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
     &:hover{
         background-color: #162b53;
@@ -285,6 +297,13 @@ th.nopadding {
     }
     p{
         margin-bottom: 10px;
+    }
+}
+.document__top {
+    width: 100%;
+    display: flex;
+    .bottom-button {
+        width: 100%;
     }
 }
 
@@ -645,17 +664,28 @@ th.nopadding {
     }
 }
 
+
+.ui-datepicker-year {
+    background-color: #f4f7fa;
+    padding: 5px;
+    border: none;
+    border-radius: 2px;
+}
 .upload {
     display: flex;  
     width: 100%;
     justify-content: flex-start;
-    input{
-        display: none;
-    }
+    
     label {
         display: flex;
         width: 100%;
         margin: 20px 0;
+    }
+    input {
+        border: 1px solid #ddd;
+    }
+    .inputfile {
+        display: none;
     }
 }
 
@@ -1460,6 +1490,7 @@ th.nopadding {
     }
     .open-upload-button{
         white-space: nowrap;
+        margin-right: 10px;
     }
     &__button {
         width: 100%;
@@ -1472,11 +1503,12 @@ th.nopadding {
         overflow: hidden;
         padding-left: 30px; 
         display: flex;
-
-    }
-    .m-desc{
         display: flex;
         width: 100%;
+        .m-desc {
+            display: flex;
+            width: 100%;
+        }
         @media screen and (max-width: 425px) {
             flex-wrap: wrap;
             
@@ -1500,9 +1532,13 @@ th.nopadding {
     }
 }
 .open-upload {
-    display: none !important;
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
     &.visible {
-        display: flex !important;
+        position: static;
+        visibility: visible;
+        opacity: 1;
     }
 }
 .bill {
@@ -1759,6 +1795,9 @@ th.nopadding {
         }
     }
 }
+.open-upload {
+    height: 100%;
+}
 .bill-table{
     overflow-y: visible !important;
     .nice-select{ 
@@ -1774,6 +1813,13 @@ th.nopadding {
     }
     table{
         overflow-y: visible !important; 
+    }
+}
+
+.nice-select {
+    .list {
+        max-height: 300px;
+        overflow-y: auto !important;
     }
 }
 
@@ -2300,6 +2346,11 @@ th.nopadding {
             }
         }
     }
+}
+
+.ovya {
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .notificate {

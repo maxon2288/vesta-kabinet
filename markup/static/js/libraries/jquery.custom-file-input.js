@@ -10,7 +10,7 @@
 	$( '.inputfile' ).each( function()
 	{
 		var $input	 = $( this ),
-			$label	 = $input.next( 'label' ),
+			$label	 = $input.closest(".upload").find( 'label' ),
 			labelVal = $label.html();
 
 		$input.on( 'change', function( e )

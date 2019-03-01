@@ -36,7 +36,7 @@
                         </button>
                 </div>
             </form>
-        </div>
+        </div>  
     </div>
 </div>
 <div class="popup delete">
@@ -131,13 +131,18 @@
 </div>
 
 <div class="popup document-popup">
-    <div class="popup__container">
+    <div class="popup__container ovya">
         <div class="popup-content">
             <div class="popup__close popupClose">
                 {{Icon iconName="close"}}
             </div>
             <div class="document__desc">
-                <h1 >
+                <div class="document__top">
+                    <a href="doc.docx" download class="bottom-button mb20">
+                        скачать 
+                    </a>
+                </div>
+                <h1>
                     fdsajksdafkl
                 </h1>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis hic amet dicta numquam. Autem dolore distinctio quam consequuntur, voluptas minus eaque tenetur in quae ea doloribus harum accusantium animi nostrum.</p>
@@ -303,17 +308,7 @@
                 <div class="popup__desc  popup__block white">
                     <div class="add-payment__content">
                         <input type="text" name="srok" class="m-field" placeholder="Сумма платежа">
-                        <div class='input-group date' id='datepicker'>
-                            <input type='text' class="form-control m-field" placeholder="Дата и время">
-                            <span class="input-group-addon m-button">
-                                <span class="glyphicon glyphicon-calendar">
-                                    {{Icon iconName="calendar"}}
-                                </span>
-                            </span>
-                        </div>
                     </div>
-    
-                    
             
                 </div>
                 <div class="popup__delete-button  popup__block">
@@ -341,14 +336,7 @@
                 <div class="popup__desc  popup__block white">
                     <div class="add-payment__content">
                         <input type="text" name="srok" class="m-field" placeholder="Сумма платежа">
-                        <div class='input-group date' id='datepicker'>
-                            <input type='text' class="form-control m-field" placeholder="Дата и время">
-                            <span class="input-group-addon m-button">
-                                <span class="glyphicon glyphicon-calendar">
-                                    {{Icon iconName="calendar"}}
-                                </span>
-                            </span>
-                        </div>
+                        
                     </div>
     
                     
@@ -499,6 +487,9 @@
             <form action="/" class="form-edit">
 
                 <div class="form-edit__content">
+                    <a href="doc.docx" download class="bottom-button mb20">
+                        скачать 
+                    </a>
                     <input type="text" name="text" class="m-field" placeholder="заголовок документа">
                     
                     <label for="textarea" class="field-label">содержимое документа</label>
@@ -543,18 +534,22 @@
                 </div>
             </div>
             <form action="/" class="form-edit">
-
+                
                 <div class="form-edit__content">
                     <input type="text" name="text" class="m-field" placeholder="заголовок документа">
                     
                     <label for="textarea" class="field-label">содержимое документа</label>
                     <textarea name="editor1" name="textarea" id="editor1" rows="10" cols="80">
-        
+                        
                     </textarea>
-
+                    
                     <script>
                         CKEDITOR.replace( 'editor1' );
                     </script>
+                    <div class="upload">
+                        <input type="file" id="file-3" name="file-1[]"class="inputfile inputfile-1" data-multiple-caption="{count} files selected" multiple="">
+                        <label for="file-3" class="bottom-button bottom__button"><span>Загрузить файл</span></label>
+                    </div>
                 </div>
                 
                 <div class="form-edit__bottom">

@@ -89,7 +89,8 @@ $(document).ready(function () {
          });
 	 });
 	 //default intialize
-	 $('#datepicker ').datetimepicker();
+	//  $('#datepicker ').datetimepicker();
+
 	 $(".data-href").each(function() {
 		var it = $(this);
 		it.click(function() {
@@ -139,7 +140,7 @@ $(document).ready(function () {
 
 	 
 	 
-	 $('.form-datepicker').datepicker({});
+	
 	$('.stats-content-click').each(function() {
         var it = $(this);
          it.validate({
@@ -196,9 +197,13 @@ $(document).ready(function () {
 
 
 	$(".open-upload-button, .upload-otmena").click(function() {
-		$(".open-upload").toggleClass("visible")
+		$(this).closest(".bill-doc").find(".open-upload").toggleClass("visible");
+		
 	});
-	
-	
+
+	$( ".form-datepicker" ).datepicker({
+		yearRange: "-100:-0",
+        changeYear: true,
+    });
 
 })
